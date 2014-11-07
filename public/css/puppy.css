@@ -25,7 +25,7 @@ h1 {
 	font-size: 70px;
     color: #ff4500;
     position: fixed;
-    right: 10px;
+    right: 30px;
     top: 260px;
     padding: 0px;
     font-family: 'Pacifico', cursive;
@@ -50,6 +50,26 @@ h1 {
 	padding: 0px;
 	font-family: 'Gloria Hallelujah', cursive;
 }
+
+/*#recordBoardName {
+	font-size: 70px;
+	position: fixed;
+	color: #c2701f;
+	left: 20px;
+	top: 500px;
+	padding: 0px;
+    font-family: 'Shadows Into Light';, cursive;
+}
+
+#recordBoard {
+	font-size: 70px;
+	position: fixed;
+	color: #c2701f;
+	left: 10px;
+	top: 600px;
+	padding: 0px;
+	font-family: 'Shadows Into Light', cursive;
+}*/
 
 #instructions {
 	text-align: center;

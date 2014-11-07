@@ -2,9 +2,12 @@ $(document).ready(function() {
 
 // Score begins at 0
 var score = 0;
+
+var currentRecord = 0;
 // Links the 'scoreboard' tag to the JS document
 var gameScore = document.getElementById('scoreboard');
-
+// Links the 'recordBoard' tag to the JS document
+var recordScore = document.getElementById('recordBoard');
 
 function fadeInPuppy() {
 	// Grabs the images inside each individual square
@@ -21,12 +24,14 @@ function fadeInPuppy() {
 		}, 3000);
 	// The following effects will happen when a puppy is clicked...
 	$(puppy).click(function() {
-		// Calls the whimper sound from the html
-		var puppyWhimper = document.getElementById('whimper');
+		// Picks an element at random from 0 to 2
+		var randomSound = Math.floor(Math.random()* 3);
+		// Applies random picking to the 'bark' audio files
+		var puppySound = document.getElementById('bark' + randomSound);
 		// Loads the sound
-		puppyWhimper.load();
+		puppySound.load();
 		// Plays the sound
-		puppyWhimper.play();
+		puppySound.play();
 		// Keeps game from adding points based on how many times this puppy is clicked on
 		$(this).off();
 		// Adds one point per click
@@ -41,7 +46,7 @@ function fadeInPuppy() {
 function countDown() {
 	var timeLeft = document.getElementById('timer');
 	    // You have 45 seconds to pet all puppies
-	    var gameTimer = 45; // seconds
+	    var gameTimer = 10; // seconds
 	    // Exactly one second between count downs
 	    var interval = 1000;
 	    // Establishes what to do during countdown
@@ -71,6 +76,7 @@ var startButton = document.getElementById('startButton');
 
 // Game begins as soon as "Meet the Furry Friends" button is clicked
 startButton.addEventListener('click', countDown);
+// Hides start button as soon as the game begins
 startButton.addEventListener('click', hideButton);
 
 });
