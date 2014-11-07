@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Pet All Puppies!!!</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Patrick+Hand|Indie+Flower' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+		<link href="css/puppy.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<h1>Pet All Puppies!!!</h1>
+		<div id="instructions">
+			You have 45 seconds to pet each puppy as it appears in the square!  One point per puppy!  Press the button to begin!
+		</div>
+		<div id="button-space">
+			<button type="submit" class="btn btn-info" id="startButton">Meet the Furry Friends!</button>
+		</div>
+		<div id="timerName">
+			<em>Time:</em>
+			<div id="timer"></div>
+		</div>
+		<div id="scoreName">
+			<em>Score:</em>
+			<div id="scoreboard"></div>
+		</div>
+		<div class="container-middle">
+			<div class="row">
+				<p class="col-sm-4" id="square1">
+					<img src="../puppies/pitBull.jpg" class="dog">
+				</p>
+				<p class="col-sm-4" id="square2">
+					<img src="../puppies/dalek.jpg" class="dog">
+				</p>
+				<p class="col-sm-4" id="square3">
+					<img src="../puppies/cavachon.jpg" class="dog">
+				</p>	
+			</div>
+			<div class="row">
+				<p class="col-sm-4" id="square4">
+					<img src="../puppies/pug.jpg" class="dog">
+				</p>
+				<p class="col-sm-4" id="square5">
+					<img src="../puppies/greatPyr.jpg" class="dog">
+				</p>
+				<p class="col-sm-4" id="square6">
+					<img src="../puppies/rottweiler.jpg" class="dog">
+				</p>
+			</div>
+			<div class="row">
+				<p class="col-sm-4" id="square7">
+					<img src="../puppies/labrador.jpg" class="dog">
+				</p>
+				<p class="col-sm-4" id="square8">
+					<img src="../puppies/goldenRetriever.jpg" class="dog">
+				</p>
+				<p class="col-sm-4" id="square9">
+					<img src="../puppies/beagle.jpg" class="dog">
+				</p>
+			</div>
+			<div>
+				<audio src="../sounds/puppyWhimper.mp3" id="whimper">
+			</div>
+		</div>
+	<script src="js/jquery-2.1.1.js" type="text/javascript"></script>
+	<script src="js/puppyJS.js" type="text/javascript"></script>
+	</body>
+</html>

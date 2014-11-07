@@ -1,0 +1,95 @@
+body {
+	cursor: url(../images/openhand.jpg), auto;
+	background-image: url(../images/meadowBackground.jpg);
+	background-repeat: no-repeat;
+}
+
+h1 {
+	text-align: center;
+	font-family: 'Shadows Into Light';, cursive;
+	font-size: 55px;
+	color: white;
+}
+
+#timerName {
+	font-size: 70px;
+    color: #ff4500;
+    position: fixed;
+    right: 50px;
+    top: 200px;
+    padding: 0px;
+    font-family: 'Pacifico', cursive;
+}
+
+#timer {
+	font-size: 70px;
+    color: #ff4500;
+    position: fixed;
+    right: 10px;
+    top: 260px;
+    padding: 0px;
+    font-family: 'Pacifico', cursive;
+}
+
+#scoreName {
+	font-size: 70px;
+	position: fixed;
+	color: green;
+	left: 10px;
+	top: 200px;
+	padding: 0px;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+#scoreboard {
+	font-size: 70px;
+	position: fixed;
+	color: green;
+	left: 10px;
+	top: 260px;
+	padding: 0px;
+	font-family: 'Gloria Hallelujah', cursive;
+}
+
+#instructions {
+	text-align: center;
+	font-size: 25px;
+	font-family: 'Patrick Hand' cursive;
+	color: #fafad2;
+}
+
+#button-space {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.container-middle {
+	border: 1px solid black;
+	height: 690px;
+	width: 798px;
+	margin-left: 260px;
+	margin-top: 50px;
+	position: relative;
+	padding: 0px;
+}
+
+.row {
+	border: 1px solid black;
+	height: 230px;
+	width: 798px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+
+}
+
+.col-sm-4 {
+	border: 1px solid black;
+	height: 228px;
+	width: 265px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+}
+
+.dog {
+	display: none;
+}
