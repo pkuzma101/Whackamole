@@ -46,16 +46,21 @@ function fadeInPuppy() {
 function countDown() {
 	var timeLeft = document.getElementById('timer');
 	    // You have 45 seconds to pet all puppies
-	    var gameTimer = 10; // seconds
+	    var gameTimer = 5; // seconds
 	    // Exactly one second between count downs
 	    var interval = 1000;
 	    // Establishes what to do during countdown
 	    var intervalId = setInterval(function () {
 	        if(gameTimer == 0) {
 	            clearInterval(intervalId);
+	            //
+	            var playAgain = document.getElementById('playAgain');
+	            $(playAgain).show();
 	            // Announces final score
 	            alert("Done!  Your score is " + score + "!");
+	            
 	        }
+
 	        else {
 	        	// Timer counts down one by one
 	            gameTimer--;
@@ -68,15 +73,38 @@ function countDown() {
 	        }, interval);
 	}
 
-function hideButton() {
+function hideStart() {
+	// Hides the start button
 	$('#startButton').hide();
 }
-// Links "Meet the Furry Friends" button to a variable
-var startButton = document.getElementById('startButton');
 
-// Game begins as soon as "Meet the Furry Friends" button is clicked
+function hidePlayAgain() {
+	// Hides the start button
+	$('#playAgain').hide();
+}
+
+function resetScore() {
+	if(score > currentRecord) {
+		recordScore.innerHTML = score;
+	}
+	gameScore.innerHTML = 0;
+	score = 0;
+}
+
+// Links the start button to a variable
+var startButton = document.getElementById('startButton');
+// Links the play again button to a variable
+var playAgain = document.getElementById('playAgain');
+
+// Game begins as soon as start button is clicked
 startButton.addEventListener('click', countDown);
 // Hides start button as soon as the game begins
-startButton.addEventListener('click', hideButton);
+startButton.addEventListener('click', hideStart);
+// Starts the game again as soon as play again button is clicked
+playAgain.addEventListener('click', countDown);
+// Hides the play again button when play again button is clicked
+playAgain.addEventListener('click', hidePlayAgain);
+
+playAgain.addEventListener('click', resetScore);
 
 });
