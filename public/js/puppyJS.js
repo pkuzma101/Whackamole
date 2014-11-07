@@ -46,7 +46,7 @@ function fadeInPuppy() {
 function countDown() {
 	var timeLeft = document.getElementById('timer');
 	    // You have 45 seconds to pet all puppies
-	    var gameTimer = 5; // seconds
+	    var gameTimer = 45; // seconds
 	    // Exactly one second between count downs
 	    var interval = 1000;
 	    // Establishes what to do during countdown
