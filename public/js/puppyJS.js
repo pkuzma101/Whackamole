@@ -46,19 +46,18 @@ function fadeInPuppy() {
 function countDown() {
 	var timeLeft = document.getElementById('timer');
 	    // You have 45 seconds to pet all puppies
-	    var gameTimer = 45; // seconds
+	    var gameTimer = 10; // seconds
 	    // Exactly one second between count downs
 	    var interval = 1000;
 	    // Establishes what to do during countdown
 	    var intervalId = setInterval(function () {
 	        if(gameTimer == 0) {
 	            clearInterval(intervalId);
-	            //
+	            // 
 	            var playAgain = document.getElementById('playAgain');
 	            $(playAgain).show();
 	            // Announces final score
-	            alert("Done!  Your score is " + score + "!");
-	            
+	            alert("Done!  Your score is " + score + "!");   
 	        }
 
 	        else {
@@ -84,9 +83,12 @@ function hidePlayAgain() {
 }
 
 function resetScore() {
+	// Sets new record if current score beats record
 	if(score > currentRecord) {
 		recordScore.innerHTML = score;
 	}
+	// Resets score upon starting new game
+	$(fadeInPuppy).off();
 	gameScore.innerHTML = 0;
 	score = 0;
 }
